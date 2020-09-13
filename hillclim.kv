@@ -13,6 +13,8 @@
         source:'img/portada.png'
 
 <Login>:
+    username:username
+    password:password
     rows:3
     GridLayout:
         cols:1
@@ -29,6 +31,7 @@
                 size_hint_y:1
                 text:'Username'
             TextInput:
+                id:username
                 multiline:False
         BoxLayout:
             padding:20
@@ -37,12 +40,14 @@
                 size_hint_y:1
                 text:'Password'
             TextInput:
+                id:password
                 multiline:False
                 password:True
     BoxLayout:
         padding:[80,10,80,150]
         Button:
             text:'Log in'
+            on_press:root.btn()
 
 #Segunda Vista
 <Tittle_up@BoxLayout>:
